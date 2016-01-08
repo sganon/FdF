@@ -6,7 +6,7 @@
 #    By: sganon <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/01/08 12:50:42 by sganon            #+#    #+#              #
-#    Updated: 2016/01/08 16:48:34 by sganon           ###   ########.fr        #
+#    Updated: 2016/01/08 17:27:10 by sganon           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,6 +14,7 @@ NAME = fdf
 
 SRC =	main.c \
 		get_next_line.c \
+		parcing.c \
 
 SRC_DIR = srcs/ \
 
