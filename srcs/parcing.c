@@ -6,7 +6,7 @@
 /*   By: sganon <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/01/08 17:05:33 by sganon            #+#    #+#             */
-/*   Updated: 2016/01/11 13:05:40 by sganon           ###   ########.fr       */
+/*   Updated: 2016/01/11 16:01:55 by sganon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,11 +41,33 @@ char	*read_that_file(char *filename)
 		return (tmp);
 }
 
-char	**put_in_tab(char *str)
+int		get_width(char *str)
 {
-	char	**tab;
+	int i;
+
+	i = 0;
+	while (str[i] != '\n')
+		i++;
+	return (i);
+}
+
+int		get_height(char *str)
+{
+	int width;
+
+	width = get_width(str);
+	return (width / ft_strlen(str));
+}
+
+int		**put_in_tab(char *str)
+{
 	int		**ret;
 
-	tab = ft_strsplit(str, ' ');
-	return (tab);
+	ret = (int **)malloc(sizeof(int *) * get_heigth(str));
+	while (i <= get_height)
+	{
+		ret[i] = (int *)malloc(sizeof(int) * get_width(str));
+		ret[i] 
+	}
+	return (ret);
 }

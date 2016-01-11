@@ -6,20 +6,20 @@
 /*   By: sganon <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/01/08 12:59:22 by sganon            #+#    #+#             */
-/*   Updated: 2016/01/11 12:48:04 by sganon           ###   ########.fr       */
+/*   Updated: 2016/01/11 14:06:52 by sganon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "fdf.h"
 
-void	ft_put_tab(char **tab)
+void	ft_put_tab(int **tab)
 {
 	int i;
 
 	i = 0;
 	while (tab[i])
 	{
-		ft_putendl(tab[i]);
+		ft_putnbr(tab[i][0]);
 		i++;
 	}
 }
