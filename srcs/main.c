@@ -6,7 +6,7 @@
 /*   By: sganon <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/01/08 12:59:22 by sganon            #+#    #+#             */
-/*   Updated: 2016/01/09 17:44:13 by sganon           ###   ########.fr       */
+/*   Updated: 2016/01/11 12:48:04 by sganon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,8 +32,7 @@ int		main(int argc, char **argv)
 	(void)argv;
 
 	env = (t_env *)malloc(sizeof(t_env));
-	read_that_file(argv[1], env);
-	ft_put_tab(env->tab);
+	ft_put_tab(put_in_tab(read_that_file(argv[1])));
 	if(!(env->mlx = mlx_init()))
 		return (0);
 	env->win = mlx_new_window(env->mlx, 1920, 1080, "FdF");
