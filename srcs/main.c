@@ -6,20 +6,20 @@
 /*   By: sganon <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/01/08 12:59:22 by sganon            #+#    #+#             */
-/*   Updated: 2016/01/11 14:06:52 by sganon           ###   ########.fr       */
+/*   Updated: 2016/01/12 13:48:16 by sganon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "fdf.h"
 
-void	ft_put_tab(int **tab)
+void	ft_put_tab(char **tab)
 {
 	int i;
 
 	i = 0;
 	while (tab[i])
 	{
-		ft_putnbr(tab[i][0]);
+		ft_putendl(tab[i]);
 		i++;
 	}
 }
@@ -32,7 +32,8 @@ int		main(int argc, char **argv)
 	(void)argv;
 
 	env = (t_env *)malloc(sizeof(t_env));
-	ft_put_tab(put_in_tab(read_that_file(argv[1])));
+	read_that_file(argv[1], env);
+	ft_put_tab(env->tab);
 	if(!(env->mlx = mlx_init()))
 		return (0);
 	env->win = mlx_new_window(env->mlx, 1920, 1080, "FdF");
