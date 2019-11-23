@@ -6,13 +6,13 @@
 /*   By: sganon <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/01/08 12:47:50 by sganon            #+#    #+#             */
-/*   Updated: 2016/02/22 13:07:46 by sganon           ###   ########.fr       */
+/*   Updated: 2019/11/23 19:08:50 by simon            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FDF_H
 # define FDF_H
-# include <mlx.h>
+# include "mlx.h"
 # include "libft.h"
 # include "get_next_line.h"
 
